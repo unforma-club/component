@@ -1,6 +1,6 @@
 {
     "name": "@unforma-club/component",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Unforma™ Club component library",
     "repository": "https://github.com/unforma-club/component.git",
     "author": "Taufik Oktama <ot@unforma.club>",
@@ -9,15 +9,15 @@
     "publishConfig": {
         "registry": "https://npm.pkg.github.com/unforma-club"
     },
-    "type": "module",
     "main": "dist/cjs/index.js",
-    "module": "dist/esm/index.js",
+    "module": "dist/index.js",
     "files": [
         "dist"
     ],
     "types": "dist/index.d.ts",
+    "typings": "dist/index.d.ts",
     "scripts": {
-        "rollup": "rollup --bundleConfigAsCjs -c"
+        "rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs"
     },
     "devDependencies": {
         "@babel/core": "^7.20.12",
