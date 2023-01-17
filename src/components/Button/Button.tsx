@@ -9,5 +9,5 @@ export interface ButtonProps
 
 export default function Button(props: ButtonProps) {
     const { children, ...rest } = props;
-    return <button {...rest}>{children}</button>;
+    return <button {...rest}>{children} Test</button>;
 }
