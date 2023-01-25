@@ -6,7 +6,7 @@ module.exports = {
     env: {
         browser: true,
         node: true,
-        jest: true
+        jest: true,
     },
     root: true,
     parser: "@typescript-eslint/parser",
@@ -14,12 +14,12 @@ module.exports = {
         ecmaVersion: 11,
         sourceType: "module",
         ecmaFeatures: {
-            jsx: true
-        }
+            jsx: true,
+        },
     },
     rules: {
         "prettier/prettier": ["error", prettierConfig],
         "newline-before-return": "error",
-        "import/no-anonymous-default-export": 0
-    }
+        "import/no-anonymous-default-export": 0,
+    },
 };

@@ -18,42 +18,37 @@ const config = {
             file: pkg.main,
             format: "cjs",
             exports: "named",
-            sourcemap: false
+            sourcemap: false,
         },
         {
             file: pkg.module,
             format: "es",
             exports: "named",
-            sourcemap: false
-        }
+            sourcemap: false,
+        },
     ],
     plugins: [
-        postcss({
-            plugins: [],
-            minimize: true
-        }),
-        external({
-            includeDependencies: true
-        }),
+        postcss({ minimize: true }),
+        external({ includeDependencies: true }),
         typescript({
             tsconfig: "./tsconfig.json",
             typescript: typescriptEngine,
-            sourceMap: false
+            sourceMap: false,
         }),
         commonjs(),
         babel({
             extensions: [...DEFAULT_EXTENSIONS, ".ts", "tsx"],
             babelHelpers: "runtime",
-            exclude: /node_modules/
+            exclude: /node_modules/,
         }),
         url(),
         svgr(),
         resolve(),
-        terser()
+        terser(),
     ],
     watch: {
-        clearScreen: false
-    }
+        clearScreen: false,
+    },
 };
 
 export default config;
